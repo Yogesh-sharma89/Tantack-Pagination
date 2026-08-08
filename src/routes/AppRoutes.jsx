@@ -12,7 +12,7 @@ import { hydrateUser } from '../features/auth/slice/auth.thunk'
 
 
 const LoginPage = lazy(() => import("../features/auth/pages/LoginPage"))
-const HomePage = lazy(() => import("../shared/pages/HomePage"))
+
 const NotFoundPage = lazy(() => import("../shared/pages/NotFoundPage"))
 const ShopPage = lazy(() => import("../features/products/pages/ShopPage"))
 const AboutPage = lazy(() => import("../features/about/page/AboutPage"))
