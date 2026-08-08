@@ -11,7 +11,10 @@ const useAuthForm = () => {
   const dispatch = useDispatch();
   const naviagte = useNavigate();
  
-  const {handleSubmit,register,reset,formState:{errors}} = useForm({mode:"onBlur"});
+  const {handleSubmit,register,reset,formState:{errors}} = useForm({mode:"onBlur",defaultValues:{
+    "username":"emilys",
+    "password":"emilyspass"
+  }});
 
   const onSubmit = async(data)=>{
      try{
