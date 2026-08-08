@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect } from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router'
 import ProtectedRoute from './ProtectedRoute'
 import PublicRoute from './PublicRoute'
 
@@ -39,9 +39,7 @@ const AppRoutes = () => {
                     children: [
                         {
                             index: true,
-                            element: <Suspense fallback={<Loader />}>
-                                <HomePage />
-                            </Suspense>
+                            element: <Navigate to={'/shop'} replace/>
                         },
                         {
                             path: "shop",
